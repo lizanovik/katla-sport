@@ -5,7 +5,8 @@ using KatlaSport.DataAccess.ProductCatalogue;
 
 namespace KatlaSport.Services.CatalogueManagement
 {
-    internal class CatalogueManagementService : ICatalogueManagementService
+    internal class
+        CatalogueManagementService : ICatalogueManagementService
     {
         private readonly IProductCatalogueContext _catalogueContext;
 
