@@ -46,7 +46,7 @@ namespace KatlaSport.Services.ProductManagement
                 throw new RequestedResourceNotFoundException();
             }
 
-            var dbProducts = await _context.Products.OrderBy(p => p.Id).Where(p => p.CategoryId == productCategoryId).ToArrayAsync();
+            var dbProducts = await _context.Products.OrderBy(p => p.Id).Where(p => p.CategoryId == productCategoryId).ToArrayAsync().ConfigureAwait(false);
             var products = dbProducts.Select(p => Mapper.Map<ProductCategoryProductListItem>(p)).ToList();
 
             return products;
@@ -55,7 +55,7 @@ namespace KatlaSport.Services.ProductManagement
         /// <inheritdoc/>
         public async Task<Product> GetProductAsync(int productId)
         {
-            var dbProducts = await _context.Products.Where(p => p.Id == productId).ToArrayAsync();
+            var dbProducts = await _context.Products.Where(p => p.Id == productId).ToArrayAsync().ConfigureAwait(false);
 
             if (dbProducts.Length == 0)
             {
