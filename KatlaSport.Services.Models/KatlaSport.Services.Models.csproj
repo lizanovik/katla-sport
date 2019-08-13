@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyManagement\Company.cs" />
+    <Compile Include="CompanyManagement\DepartmentManagement\Department.cs" />
+    <Compile Include="CompanyManagement\DepartmentManagement\IDepartmentManagementService.cs" />
+    <Compile Include="CompanyManagement\EmployeeManagement\Employee.cs" />
+    <Compile Include="CompanyManagement\EmployeeManagement\IEmployeeManagementService.cs" />
+    <Compile Include="CompanyManagement\ICompanyService.cs" />
     <Compile Include="HiveManagement\Hive.cs" />
     <Compile Include="HiveManagement\HiveListItem.cs" />
     <Compile Include="HiveManagement\HiveSection.cs" />
@@ -90,5 +96,6 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
